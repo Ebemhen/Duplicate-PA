@@ -107,4 +107,39 @@ int main()
     }    
       
     return 0;
+}file_names[j], file_name);
+                    files_id[file_exists] = newId;
+                    files_id[j] = -1;
+                }    
+            }
+        }  
+
+
+        //loop to sort the file ids stored, in an ascending order
+        int sortId;
+        for (int i = 0; i < num_of_files; i++)
+        {
+            for (int j = i + 1; j < num_of_files; j++)
+            {
+                if(files_id[i] > files_id[j]){
+                    sortId = files_id[i];
+                    files_id[i] = files_id[j];
+                    files_id[j] = sortId;
+                }
+            }
+            
+        }
+
+        //loop to print the file ids
+        for(int i= 0; i < num_of_files; i++){
+            if (files_id[i] != -1)
+            {
+                printf("%d\t", files_id[i]);
+            }
+            
+        }
+        printf("\n");
+    }    
+      
+    return 0;
 }
